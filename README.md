@@ -50,10 +50,6 @@ MIT
 
 
 
-<<<<<<< HEAD
-   [csgl]:  https://github.com/ceratic/csgl
-=======
    [csgl]:  https://github.com/ceratic/csgl/
->>>>>>> origin/master
    [PureBasic 4]: http://www.purebasic.com/german/index.php
    
