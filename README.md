@@ -1,4 +1,4 @@
-# Ceratic-Soft Gamelauncher [[csgl]] (obsolete) (discontinued)
+# Ceratic-Soft Gamelauncher - [[csgl]] - (obsolete) (discontinued)
 
 Ceratic-Soft Gamelauncher oder auch [[csgl]] abgekürzt ist ein Spiel / Programm Launcher & Patcher welcher eine "versions" datei auf im Stammverzeichnis prüft, diese dann mit einer Online Verison vergleicht und bei abwechungen die fehlenden Patches (.zip files) herunter läd und ggf entpackt.
 
@@ -50,6 +50,6 @@ MIT
 
 
 
-   [csgl]:  <https://github.com/joemccann/dillinger>
+   [csgl]:  https://github.com/ceratic/csgl
    [PureBasic 4]: http://www.purebasic.com/german/index.php
    
