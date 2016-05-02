@@ -41,7 +41,7 @@ patch1
 patch1hotfix
 ```
 oder ähnliches. Sollte nun ein anderer den Launcher / Patcher starten und hat in seiner Lokalen "patch.dat" nichts stehen, so läd der Patcher aus der oben eingestellten 
-"Global GadgetURL$ = "http://patches.myurl.de/"" url die ein träge patch1.zip und patch1hotfix.zip und entpackt diese ins Stammverzeichnis in welcher die Launcher.exe liegt.
+```Global GadgetURL$ = "http://patches.myurl.de/"``` url die ein träge patch1.zip und patch1hotfix.zip und entpackt diese ins Stammverzeichnis in welcher die Launcher.exe liegt.
 
 License
 ---
