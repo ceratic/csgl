@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Csgl by ceratic</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Csgl</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/ceratic/csgl">View the Project on GitHub <small>ceratic/csgl</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ceratic/csgl/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ceratic/csgl/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ceratic/csgl">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="ceratic-soft-gamelauncher---csgl---obsolete-discontinued" class="anchor" href="#ceratic-soft-gamelauncher---csgl---obsolete-discontinued" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ceratic-Soft Gamelauncher - [<a href="https://github.com/ceratic/csgl/">csgl</a>] - (obsolete) (discontinued)</h1>
+
+<p>Ceratic-Soft Gamelauncher oder auch [<a href="https://github.com/ceratic/csgl/">csgl</a>] abgekürzt ist ein Spiel / Programm Launcher &amp; Patcher welcher eine "versions" datei auf im Stammverzeichnis prüft, diese dann mit einer Online Verison vergleicht und bei abwechungen die fehlenden Patches (.zip files) herunter läd und ggf entpackt.</p>
+
+<h2>
+<a id="version" class="anchor" href="#version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version</h2>
+
+<p>2.0.7</p>
+
+<h2>
+<a id="tech" class="anchor" href="#tech" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tech</h2>
+
+<p><a href="http://www.purebasic.com/german/index.php">PureBasic 4</a> </p>
+
+<h2>
+<a id="ordner--datenstruktur" class="anchor" href="#ordner--datenstruktur" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ordner &amp; Datenstruktur</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Funktion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Include</td>
+<td>Enthält die Bilder und Icon's, die in die .dll eingebungen werden</td>
+</tr>
+<tr>
+<td>Fertig</td>
+<td>Das fertige projekt. Die laun.dll in diesem ordner ist nur zu test zecke da und muss ersetzt werden</td>
+</tr>
+<tr>
+<td>index.pb</td>
+<td>Der Quellcode der bearbeitet werden muss und zur "laun.dll" compiliert werden muss</td>
+</tr>
+<tr>
+<td>launcher.exe.pb</td>
+<td>Das ist der Quelcode von der "launcher.exe" diese überprüft ob die "laun.dll" vorhanden ist und ruft diese auf</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="how-to-compile" class="anchor" href="#how-to-compile" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to Compile</h2>
+
+<p>Öffne die "index.pb" mit dem beiliegenden PureBasic4 Editor und Bearbeite die Zeilen 9, 10, 11, 12 mit deinen entgültigen Daten.</p>
+
+<pre lang="pb"><code>Global GadgetURL$ = "http://patches.myurl.de/"
+Global NewsButton$ = "http://news.myurl.de/"
+Global ForumButton$ = "http://www.myurl.de/forum.asp"
+Global GameEXE$ = "app.exe" ;"app.exe"
+</code></pre>
+
+<p>Danach geht man auf "Compiler -&gt; Executable erstellen" und speichert das ganze unter dem Namen "lan.dll".</p>
+
+<p>Es werden dann 3 Dateien mit den Namen "laun.dll", "laun.exp" und "laun.lib" im angegebenen verzeichniss gespeichert.
+Wichtig ist nur die Datei "laun.dll" die anderen beiden Dateien "laun.exp" und "laun.lib" können gelöscht werden.</p>
+
+<h2>
+<a id="patchdat-syntax" class="anchor" href="#patchdat-syntax" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Patch.dat Syntax</h2>
+
+<p>Die Syntax der "patch.dat" ist relativ Simpel. Man fügt einfach alle Patches dort mit ihrem dazu gehörigen namen ein, und läd diese hoch.</p>
+
+<h5>
+<a id="beispiel" class="anchor" href="#beispiel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Beispiel</h5>
+
+<p>Gehen wir nun davon aus man hat zwei Patches und möchte diesem den anderen geben. Dazu schreiben wir in unsere patch.dat einfach  </p>
+
+<pre><code>patch1
+patch1hotfix
+</code></pre>
+
+<p>oder ähnliches. Sollte nun ein anderer den Launcher / Patcher starten und hat in seiner Lokalen "patch.dat" nichts stehen, so läd der Patcher aus der oben eingestellten 
+<code>Global GadgetURL$ = "http://patches.myurl.de/"</code> url die ein träge patch1.zip und patch1hotfix.zip und entpackt diese ins Stammverzeichnis in welcher die Launcher.exe liegt.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ceratic">ceratic</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
