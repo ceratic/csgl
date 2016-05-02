@@ -50,6 +50,6 @@ MIT
 
 
 
-   [csgl]:  <https://github.com/joemccann/dillinger>
+   [csgl]:  https://github.com/ceratic/csgl/
    [PureBasic 4]: http://www.purebasic.com/german/index.php
    
